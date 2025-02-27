@@ -51,6 +51,4 @@ while i < len(number):
         terms.append(int(number[i] + "0" * (len(number) - i - 1)))
         i += 1
 
-for term in terms:
-    print(aliases[str(term)], end=" ")
-print()
+print(*(aliases[str(term)] for term in terms), sep=" ")
